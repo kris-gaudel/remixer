@@ -57,7 +57,7 @@ func (s *Sketch) Update() {
 	destX += float64(randRange(s.StrokeJitter))
 	destY := rndY * float64(s.DestHeight) / float64(s.sourceHeight)
 	destY += float64(randRange(s.StrokeJitter))
-	edges := s.MinEdgeCount + rand.Intn(s.MaxEdgeCount-s.MinEdgeCount+1)
+	edges := s.MaxEdgeCount - rand.Intn(s.MaxEdgeCount-s.MinEdgeCount+1)
 
 	s.dc.SetRGBA255(r, g, b, int(s.InitialAlpha))
 	s.dc.DrawRegularPolygon(edges, destX, destY, s.strokeSize, rand.Float64())

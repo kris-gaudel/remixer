@@ -48,13 +48,13 @@ func main() {
 	}
 
 	// Raw Image
-	// saveOutput(img, "out2.png")
+	saveOutput(img, "example1.png")
 
 	// Greyscale Image
-	// saveOutput(&greyscale.GreyscaleFilter{img}, "out4.png") 
+	saveOutput(&greyscale.GreyscaleFilter{img}, "example2.png") 
 
 	// Remixed Image
-	// saveOutput(s.Output(), "out3.png")
+	saveOutput(s.Output(), "example3.png")
 }
 
 func cpuProf(fn func()) {
